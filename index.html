@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Exemplos graaaaaah</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script>
+            function draw(){
+                var canvas = document.getElementById('meuCanvas');
+                if(canvas.getContext){
+                    var cntxt = canvas.getContext('2d');
+                    cntxt.beginPath();
+                    cntxt.fillStyle = "rgb(255, 0, 0)";
+                    cntxt.moveTo(200, 100);
+                    cntxt.bezierCurveTo(120, 50, 120, 200, 200, 200);
+                    cntxt.moveTo(200, 100);
+                    cntxt.bezierCurveTo(280, 50, 280, 200, 200, 200);
+                    cntxt.fill();
+                    cntxt.stroke();
+                    cntxt.closePath();
+                    cntxt.beginPath();
+                    cntxt.fillStyle = "rgb(0, 255, 0)";
+                    cntxt.moveTo(200, 100);
+                    cntxt.bezierCurveTo(190, 50, 250, 30, 280, 30);
+                    cntxt.fill();
+                    cntxt.stroke();
+                    cntxt.closePath();
+                }
+            }
+        </script>
+    </head>
+    <body onload="draw();">
+        <canvas id="meuCanvas" width="400" height="400" style="border:1px solid #000000; "></canvas>
+    </body>
+</html>
