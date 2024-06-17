@@ -73,7 +73,32 @@ gradInf.addColorStop(0, "rgb(120, 10, 10)");
                     cntxt.fill();
                     cntxt.stroke();
                     cntxt.closePath();
-}
+                    
+                    // circulo superior direito /
+                    cntxt.beginpath();
+                    cntxt.fillStyle -gradR;
+                    cntxt.arc(300, 100, 97, 0 Math.PI * 2, true);
+                    cntxt.fill();
+                    cntxt.stroke();
+                    cntxt.closepath();
+
+                    // Olho inferior direito /
+                    cntxt.beginpath();
+                    cntxt.fillStyle = gradRinf;
+                    cntxt.moveTo(210, 300);
+                    cntxt.quadraticCurveTo(300, 200,  390, 300
+                    cntxt.fill();
+                    cntxt.stroke();
+                    cntxt.beginpath();
+                    cntxt.moveTo(210, 300);
+                    cntxt.quadraticCurveTo(300, 400, 390, 300)
+                    cntxt.fill();
+                    cntxt.stroke();
+                    cntxt.closePath();
+                        
+                    )
+                    
+                }                 
 
             }
         </script>
